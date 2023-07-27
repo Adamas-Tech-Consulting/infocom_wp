@@ -167,4 +167,12 @@ height: 30px; line-height: 30px;
 	.mail-subscribe{
 		margin: 15px 0 15px 0;
 	}
+
+	.small-footer{
+		text-align: center;
+	}
+
+	.small-footer ul {
+	  float: none;
+	}
 }
