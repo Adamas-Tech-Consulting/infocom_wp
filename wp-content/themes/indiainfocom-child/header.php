@@ -49,8 +49,9 @@
 				if($show_on_homepage_banner)
 			{ ?>
 
+				<div class="item">
 
-		            <div class="banner-details banner<?php echo $i; ?>" style="background-image: url('<?php echo $backgroundImg['0'];?>')">
+		            <div class="banner-details banner<?php echo $i; ?>" style="background: url('<?php echo $backgroundImg['0'];?>')">
 
 		                <div class="container">
 
@@ -72,6 +73,8 @@
 		                </div>
 		                
 		            </div>
+				
+				</div>
 
 			<?php }  ?>
 

@@ -73,6 +73,9 @@ function register_child_theme_styles() {
  
     wp_register_style('maincss', get_stylesheet_directory_uri().'/assets/css/main.css', array(),'null', 'all');
     wp_enqueue_style('maincss');
+
+     wp_register_style('mediacss', get_stylesheet_directory_uri().'/assets/css/media.css', array(),'null', 'all');
+    wp_enqueue_style('mediacss');  
     
 }
 

@@ -1,0 +1,144 @@
+@media (max-width: 991px){
+	.top-menu{
+		display: block;
+		padding: 7px 15px !important;
+    	text-align: center;
+    	background: var(--secondry);
+	}
+
+	.basic-contact ul li{
+		margin-right: 10px;
+	}
+
+	html body div#wprmenu_bar {
+	    height: 60px !important;
+	}
+
+	html body div#wprmenu_bar {
+	    background-color: #ffffff;
+	}
+
+	.wprmenu_bar .hamburger-inner, .wprmenu_bar .hamburger-inner::before, .wprmenu_bar .hamburger-inner::after {
+	    background: #000000 !important;
+	}
+
+	.wprmenu_bar .hamburger {
+	    float: right;
+	    margin-top: 5px !important;
+	    margin-right: 10px !important;
+	}
+
+	#wprmenu_bar img.bar_logo{
+		height: 30px;
+	}
+
+	body {
+	    padding-top: 90px;
+	}
+
+	.wprmenu_icon span:nth-child(1), #wprmenu_bar, html body .wprm-overlay.active, #mg-wprm-wrap.cbp-spmenu.custom {
+	    top: 73px !important;     z-index: 3 !important;
+	}
+
+	.site-header.is-hidden {
+	     -webkit-transform: translateY(0px);
+	    -ms-transform: translateY(0px);
+	    transform: translateY(0px);
+	}
+
+	.wpcf7-form .row{
+		display: block;
+	}
+
+	.video-list.inner.list h2 select{
+		    width: 100%;
+		    margin: 50px 0 0;
+	}
+
+	.event-conference h2{
+		position: static;
+	}
+
+	.banner-area a.register-now{
+		display: none;
+	}
+
+	.event-tab-section li{
+		margin-bottom: 10px;
+	}
+
+	.event-info h3{
+		font-size: 23px;
+	}
+
+	.event-info.left h3:after{
+		top: 34px;
+	}
+
+	.sticky-menu{
+		top: 129px;
+	}
+
+	.back-bttn{
+		    top: 33px;     z-index: 99999;
+	}
+
+	body ul.caf-filter-container.caf-filter-layout1{
+		    width: 100%; text-align: left;
+	}
+
+	.login-menu{
+		float: none;
+	}
+
+	.latest-conference h2, .session-videos.white-bg .video-list h2, .all-blogs h2, .testiminials h2{
+		font-size: 32px;
+	}
+
+	body #mg-wprm-wrap.cbp-spmenu-left, body #mg-wprm-wrap.cbp-spmenu-right, body #mg-widgetmenu-wrap.cbp-spmenu-widget-left, body #mg-widgetmenu-wrap.cbp-spmenu-widget-right {
+	    top: 0 !important;
+	}
+
+	.testiminials p {
+	    font-size: 17px;
+	    line-height: 28px;
+	}
+
+	.conference-item .slick-arrow.slick-next, .testiminials .slick-arrow.slick-next{
+		right: 0;
+	}
+
+	.conference-item .slick-arrow.slick-prev, .testiminials .slick-arrow.slick-prev{
+		left: 0;
+	}
+
+	.banner-details h2 {
+	    font-size: 26px;
+	}
+
+	.banner-details h3 {
+	    font-size: 11px;
+	}
+
+	.banner-details{
+		height: auto;
+	}
+
+	.banner-details a.explore-now, a.register-now{
+		padding: 8px 15px;
+	}
+
+	.site-footer .col-md-4 {
+	    margin-bottom: 25px;
+	    padding: 0 15px !important;
+	}
+
+	footer.site-footer h5.justify-content-between img{
+		height: 51px;
+    	width: auto;
+	}
+
+	.mail-subscribe{
+		margin: 15px 0 15px 0;
+	}
+}

@@ -217,10 +217,8 @@ get_header();?>
 													<hr class="ml-2">
 												</h4>
 												<div class="row my-2">
-													<div class="col-md-2">
-														<img src="<?php echo $sponser_img;?>" class="img-fluid">
-													</div>
-													<div class="col-md-8">
+													
+													<div class="col-md-10">
 														<em><?php echo $add_track; ?></em>  &nbsp;
 														<em>
 															<?php if($start_time) : ?>
@@ -243,7 +241,9 @@ get_header();?>
 														<?php endif; ?> 
 
 													</div>
-													<div class="col-md-2"></div>
+													<div class="col-md-2">
+														<img src="<?php echo $sponser_img;?>" class="img-fluid">
+													</div>
 												</div>
 											</li>
 
@@ -294,7 +294,7 @@ get_header();?>
 						<div class="col-md-12">
 							<h2><strong>Event</strong> Speakers</h2>
 
-							<ul class="option-link">
+							<ul class="option-link d-none">
 								<div class="nav filter-speaker" role="tablist">
 									<li class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-highlight" type="button" role="tab" aria-selected="true"><span class="speaker-highlight">Highlight</span></li>
 									<li class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-key" type="button" role="tab" aria-selected="true"><span class="speaker-key">KeyNoteSpeaker</span></li>
@@ -303,38 +303,41 @@ get_header();?>
 														
 							</ul>
 							
-								<div class="tab-content">
+								<div class="tab-content1">
 										
 										
-										<div class="tab-pane fade show active" id="nav-highlight" role="tabpanel">
+										<!-- <div class="tab-pane fade show active" id="nav-highlight" role="tabpanel"> -->
+
 												<div class="row">
-														<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
-															$add_speaker_image = get_sub_field('add_speaker_image');
-															$add_speaker_name = get_sub_field('add_speaker_name');
-															$add_company_name = get_sub_field('add_company_name');
-															$add_designation = get_sub_field('add_designation');
-															$options = get_sub_field('choose_speaker_type');
-														?>
+												<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
+													$add_speaker_image = get_sub_field('add_speaker_image');
+													$add_speaker_name = get_sub_field('add_speaker_name');
+													$add_company_name = get_sub_field('add_company_name');
+													$add_designation = get_sub_field('add_designation');
+													$options = get_sub_field('choose_speaker_type');
+												?>
 														
-																<?php if( $options && in_array('Highlight', $options) ) { ?>
-																	<div class="col-md-3">
-																		<div class="speaker">
-																			<div class="hover-overlay">
-																				<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
-																			</div>
-																			<div class="speaker-meta">                                                  
-																				<h5 class=""><?php echo $add_speaker_name; ?></h5>
-																				<span class=""><?php echo $add_designation; ?></span>
-																				<p class=""><?php echo $add_company_name; ?></p>
-																				
-																			</div>
-																		</div>
-																	</div>
-																<?php } ?>
+																
+													<div class="col-md-3">
+														<div class="speaker">
+															<div class="hover-overlay">
+																<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+															</div>
+															<div class="speaker-meta">                                                  
+																<h5 class=""><?php echo $add_speaker_name; ?></h5>
+																<span class=""><?php echo $add_designation; ?></span>
+																<p class=""><?php echo $add_company_name; ?></p>
+																
+															</div>
+														</div>
+													</div>
+																
 														<?php $i++; endwhile; ?>
 												</div>
-										</div>
-										<div class="tab-pane fade" id="nav-key" role="tabpanel">
+										<!-- </div> -->
+
+
+										<div class="tab-pane fade d-none" id="nav-key" role="tabpanel">
 											<div class="row">
 												<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
 													$add_speaker_image = get_sub_field('add_speaker_image');
@@ -361,7 +364,9 @@ get_header();?>
 												<?php $i++; endwhile; ?>
 											</div>
 										</div>
-										<div class="tab-pane fade" id="nav-regular" role="tabpanel">
+
+
+										<div class="tab-pane fade d-none" id="nav-regular" role="tabpanel">
 											<div class="row">
 												<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
 													$add_speaker_image = get_sub_field('add_speaker_image');
