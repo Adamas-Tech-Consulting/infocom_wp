@@ -28,8 +28,20 @@
 	    margin-right: 10px !important;
 	}
 
+	article.caf-mb-5{
+		padding-right: 0 !important;
+	}
+
 	#wprmenu_bar img.bar_logo{
 		height: 30px;
+	}
+
+	.sponsership h2{
+		font-size: 32px;
+	}
+
+	.video-list.inner .px-2, .project-tiles .px-2{
+		padding:10px 15px !important;
 	}
 
 	body {
@@ -53,6 +65,11 @@
 	.video-list.inner.list h2 select{
 		    width: 100%;
 		    margin: 50px 0 0;
+		        position: static;
+	}
+
+	#mg-wprm-wrap li.menu-item a{
+		text-transform: capitalize !important;
 	}
 
 	.event-conference h2{
