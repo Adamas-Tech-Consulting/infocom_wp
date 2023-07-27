@@ -175,4 +175,8 @@ height: 30px; line-height: 30px;
 	.small-footer ul {
 	  float: none;
 	}
+
+	.small-footer .col-md-6{
+		padding: 0 15px !important;
+	}
 }
