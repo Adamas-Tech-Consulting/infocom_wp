@@ -15,7 +15,7 @@
 	}
 
 	html body div#wprmenu_bar {
-	    background-color: #ffffff;
+	    background-color: #ffffff; box-shadow: 0 0 10px #000;
 	}
 
 	.wprmenu_bar .hamburger-inner, .wprmenu_bar .hamburger-inner::before, .wprmenu_bar .hamburger-inner::after {
@@ -68,7 +68,7 @@
 	}
 
 	.event-info h3{
-		font-size: 23px;
+		font-size: 20px;
 	}
 
 	.event-info.left h3:after{
@@ -80,7 +80,16 @@
 	}
 
 	.back-bttn{
-		    top: 33px;     z-index: 99999;
+		top: 33px; z-index: 99999; width: 30px;
+height: 30px; line-height: 30px;
+	}
+
+	.cheif-speakers .speaker{
+		margin:0 0 25px;
+	}
+
+	.event-tab-section li a{
+		font-size: 13px;
 	}
 
 	body ul.caf-filter-container.caf-filter-layout1{
