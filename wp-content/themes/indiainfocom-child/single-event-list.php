@@ -315,6 +315,7 @@ get_header();?>
 													$add_company_name = get_sub_field('add_company_name');
 													$add_designation = get_sub_field('add_designation');
 													$options = get_sub_field('choose_speaker_type');
+													$linkedin = get_sub_field('add_linkedin_link');
 												?>
 														
 																
@@ -322,7 +323,11 @@ get_header();?>
 														<div class="speaker">
 															<div class="hover-overlay">
 																<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
-															</div>
+																<?php if( get_sub_field('add_linkedin_link') ): ?>
+																	<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
+																<?php endif; ?>
+																
+																</div>
 															<div class="speaker-meta">                                                  
 																<h5 class=""><?php echo $add_speaker_name; ?></h5>
 																<span class=""><?php echo $add_designation; ?></span>

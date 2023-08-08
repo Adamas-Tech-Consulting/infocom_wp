@@ -2168,3 +2168,11 @@ body .caf-post-layout1 #manage-post-area:before{
   .social-link li a{
     padding: 5px 0;
   }
+
+.linkedin-url{
+    position: absolute; bottom: 0; right: 20px; color: #0A66C2; font-size: 20px;
+}
+
+.linkedin-url:hover{
+    color: var(--pink);
+}
