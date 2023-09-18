@@ -193,7 +193,8 @@ get_header();?>
 								<div class="tab-pane fade <?php if($j == 1) { echo 'show active'; } ?>" id="nav-<?php echo $j; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $j; ?>">
 									
 									<ol class="flex flex-col tabular-agenda">
-									<?php while( have_rows('add_events') ): the_row(); 
+									<?php while( have_rows('add_events') ): the_row();
+									        $subtitle = get_sub_field('add_subtitle'); 
 											$start_time = get_sub_field('add_start_time');
 											$end_time = get_sub_field('add_end_time');
 											$sponser_img = get_sub_field('add_sponser_picture');
@@ -219,7 +220,8 @@ get_header();?>
 												<div class="row my-2">
 													
 													<div class="col-md-10">
-														<em><?php echo $add_track; ?></em>  &nbsp;
+													<?php if($subtitle) : ?><h2 style="color:#1245a8;"><?php echo $subtitle; ?></h2><?php endif; ?>
+														<?php if($add_track) : ?><em><?php echo $add_track; ?></em>  &nbsp; <?php endif; ?>
 														<em>
 															<?php if($start_time) : ?>
 																	<?php echo $start_time; ?>
@@ -228,20 +230,22 @@ get_header();?>
 																	- <?php echo $end_time; ?>
 																<?php endif; ?>
 														</em> &nbsp;
-														<span class="session-type"> <?php echo $add_session_type; ?></span>
-														<h5 class="text-uppercase mt-2"><?php echo $add_subject_details; ?></h5>
-														<?php echo $short_desc; ?>
-														
-														<span class="speaker-details" data-toggle="tooltip" title="<img src='<?php echo $speaker_image; ?>' class='img-fluid' /> <br/> <?php echo $speaker_designation; ?>">
-															<?php echo $speaker_name; ?>
-														</span>
-
+														<?php if($add_session_type) : ?><span class="session-type"> <?php echo $add_session_type; ?></span><?php endif; ?>
+															<?php if($add_subject_details) : ?><h5 class="text-uppercase mt-2"><?php echo $add_subject_details; ?></h5><?php endif; ?>
+																<?php if($short_desc) : ?><?php echo $short_desc; ?><?php endif; ?>
+														<?php if($speaker_image) : ?>
+															<span class="speaker-details" data-toggle="tooltip" title="<img src='<?php echo $speaker_image; ?>' class='img-fluid' /> <br/> <?php echo $speaker_designation; ?>">
+																<?php echo $speaker_name; ?>
+															</span>
+														<?php endif; ?>
 														<?php if($add_hall_number) : ?>
-															<span class="hall_number">Hall <?php echo $add_hall_number; ?></span>
+															<span class="hall_number"> <?php echo $add_hall_number; ?></span>
 														<?php endif; ?> 
 
 													</div>
-													<div class="col-md-2">
+
+
+													<div class="col-md-2 align-self-center">
 														<img src="<?php echo $sponser_img;?>" class="img-fluid">
 													</div>
 												</div>
@@ -271,7 +275,7 @@ get_header();?>
 
 
 
-	<section id="map" class="gmap">
+	<section id="map" class="gmap d-none">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -408,7 +412,7 @@ get_header();?>
 	<?php endif; ?>
 
 
-	<section id="sponser" class="sponsership">
+	<section id="sponser" class="sponsership d-none">
 			<div class="container">
 					<div class="row">
 						<div class="col-md-8 offset-md-2 text-center">
@@ -541,7 +545,7 @@ get_header();?>
     <?php endif; ?>
 
 
-	<section id="testimonial" class="testiminials text-center  wow fadeInUp" style="background: url('<?php the_field('add_testi_bg','option') ?>') no-repeat; ">
+	<section id="testimonial" class="testiminials text-center d-none  wow fadeInUp" style="background: url('<?php the_field('add_testi_bg','option') ?>') no-repeat; ">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
