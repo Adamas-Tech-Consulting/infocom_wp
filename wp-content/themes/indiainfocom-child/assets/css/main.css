@@ -662,7 +662,7 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 .conference-item .item .pic-sec img{
     height: 200px !important;
     display: inline-block;
-    object-fit: cover;
+    object-fit: cover; max-width:100%;
 }
 
 .conference-item .item h4{
@@ -1015,6 +1015,10 @@ ul.venue-details::after {
 .event-info{
     box-shadow: 0 4px 16px rgba(0,0,0,25%);
     padding: 20px; background: var(--white); padding-left: 0;
+}
+
+.event-info.right{
+    padding-left: 20px;
 }
 
 .event-info h3{
@@ -2177,4 +2181,8 @@ body .caf-post-layout1 #manage-post-area:before{
 
 .linkedin-url:hover{
     color: var(--pink);
+}
+
+.data-target-div1 .caf-post-layout1 .caf-post-title h2, .data-target-div1 .caf-post-layout1 .caf-post-title h2 a{
+    line-height: 24px !important;
 }
