@@ -32,7 +32,7 @@
 		<?php $args = array(
             'post_type' => 'event-list',
             'posts_per_page' => -1,
-            'order' => 'ASC',
+            'order' => 'DESC',
          );
             $slider = new WP_Query($args);
          ?>
@@ -64,8 +64,13 @@
 									<h2><?php the_title();?> <?php echo get_the_excerpt(); ?></h2>
 									<h3><?php the_field('add_date'); ?> | <?php the_field('add_venue'); ?></h3>
 									<a href="<?php the_permalink();?>" class="explore-now">Explore Now</a>
+									
 
-									<a href="#" class="register-now">Register Now</a>
+									<?php if( get_field('add_register_now_link') ): ?>
+
+									   <a href="#" class="register-now">Register Now</a>
+
+									<?php endif; ?>
 								</div>
 		 
 		                    </div>

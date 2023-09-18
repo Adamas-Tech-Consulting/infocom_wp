@@ -13,7 +13,12 @@ get_header();?>
 
 	<section class="banner-area position-relative">
 		<img src="<?php the_field('add_banner'); ?>" class="img-fluid" />
-		<a href="#" class="register-now">Register Now</a>
+		<?php if( get_field('add_register_now_link') ): ?>
+
+			<a href="#" class="register-now">Register Now</a>
+
+		<?php endif; ?>
+
 	</section>
 
 	<div class="sticky-menu">
@@ -21,13 +26,14 @@ get_header();?>
 			<div class="row">
 				<div class="col-md-12 p-0">
 					<ul class="event-tab-section">
-						<li><a href="#overview">Overview</a></li>
-						<li><a href="#schedule">Agenda</a></li>
-						<li><a href="#map">Map</a></li>
-						<li><a href="#speaker">Speakers</a></li>
-						<li><a href="#sponser">Sponsors</a></li>
+						<?php if ( get_the_content() ) { ?> <li><a href="#overview">Overview</a></li> <?php } ?>
+						
+						<?php if( get_field('add_event_details') ): ?><li><a href="#schedule">Agenda</a></li> <?php endif; ?>
+						<li class="d-none"><a href="#map">Map</a></li>
+						<?php if( get_field('add_speakers') ): ?><li><a href="#speaker">Speakers</a></li> <?php endif; ?>
+						<!-- <li><a href="#sponser">Sponsors</a></li>
 						<li><a href="#video">Videos</a></li>
-						<li><a href="#testimonial">Testimonials</a></li>
+						<li><a href="#testimonial">Testimonials</a></li> -->
 					</ul>
 				</div>
 			</div>

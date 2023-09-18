@@ -32,7 +32,8 @@ get_header(); ?>
 						<div class="item">
 							<div class="pic-sec">
 								<a href="<?php the_permalink();?>">
-									<?php the_post_thumbnail(); ?>
+									<?php // the_post_thumbnail(); ?>
+									<img src="<?php the_field('add_conference_logo');?>" />
 									<span><?php the_field('add_date'); ?></span>
 								</a>
 							</div>
