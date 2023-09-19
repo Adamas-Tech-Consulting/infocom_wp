@@ -62,8 +62,8 @@ function create_post(WP_REST_Request $request)
   );
   $post_id = wp_insert_post($my_post);
   wp_set_post_terms($post_id, $request['category'], $taxonomy, false);
-  set_featured_image($request['event_banner'], $post_id);
-  $banner_id = upload_media($request['featured_banner'], $post_id);
+  set_featured_image($request['featured_banner'], $post_id);
+  $banner_id = upload_media($request['event_banner'], $post_id);
   $logo_id = upload_media($request['event_logo'], $post_id);
   $input_fields = [
     'show_on_homepage_banner' => $request['featured'],
@@ -111,9 +111,9 @@ function update_post(WP_REST_Request $request)
   wp_set_post_terms($post_id, $request['category'], $taxonomy, false);
   $attach_id = get_post_thumbnail_id($post_id,'post');
   if((int)$attach_id>0) wp_delete_attachment($attach_id, true); 
-  if(isset($request['event_banner']) && $request['event_banner'])
+  if(isset($request['featured_banner']) && $request['featured_banner'])
   {
-    set_featured_image($request['event_banner'], $post_id);
+    set_featured_image($request['featured_banner'], $post_id);
   }
   $input_fields = [
     'show_on_homepage_banner' => $request['featured'],
@@ -123,10 +123,10 @@ function update_post(WP_REST_Request $request)
     'add_conference_details' => $request['event_description'],
     'add_register_now_link' => $request['registration_link'],
   ];
-  if(isset($request['featured_banner']) && $request['featured_banner']) {
+  if(isset($request['event_banner']) && $request['event_banner']) {
     $attach_id = get_post_meta($post_id, 'add_banner', true);
     if((int)$attach_id>0) wp_delete_attachment($attach_id, true);
-    $input_fields['add_banner'] = upload_media($request['featured_banner'], $post_id);
+    $input_fields['add_banner'] = upload_media($request['event_banner'], $post_id);
   }
   if(isset($request['event_logo']) && $request['event_logo']) {
     $attach_id = get_post_meta($post_id, 'add_conference_logo', true);
