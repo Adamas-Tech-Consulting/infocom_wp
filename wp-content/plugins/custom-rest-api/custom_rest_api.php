@@ -125,6 +125,8 @@ function update_post(WP_REST_Request $request)
   }
   $input_fields = [
     'show_on_homepage_banner' => $request['featured'],
+    'homepage_banner_url' => $request['featured_banner'],
+    'add_banner_url' => $request['event_banner'],
     'add_date' => date("d F, Y", strtotime($request['event_start_date'])),
     'add_venue' => $request['event_venue'],
     'add_theme' => $request['event_theme'],
@@ -161,6 +163,12 @@ function update_post(WP_REST_Request $request)
     foreach($request['event_agenda'] as $key => $event_agenda)
     {
       upsert_event_agenda($post_id, $key, $event_agenda);
+    }
+  }
+  if(isset($request['event_cios']) && $request['event_cios']) {
+    foreach($request['event_cios'] as $key => $event_cio)
+    {
+      upsert_event_cio($post_id, $key, $event_cio);
     }
   }
   $post = array('post_id' => $post_id);
