@@ -68,7 +68,7 @@
 										} else { 
 											echo get_the_excerpt();
 										}?>
-										 ?></h2>
+										 </h2>
 									<h3><?php the_field('add_date'); ?> | <?php the_field('add_venue'); ?></h3>
 									<a href="<?php the_permalink();?>" class="explore-now">Explore Now</a>
 									
