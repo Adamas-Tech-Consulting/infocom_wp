@@ -119,6 +119,8 @@ get_header();?>
 			</div>
 
 			<div class="row  mt-4">
+
+
 				<div class="col-md-3">
 					<div class="sidebar">
 						<?php $arr_type[]=""; ?>
@@ -154,11 +156,13 @@ get_header();?>
 							<?php endwhile;   //wp_reset_postdata();?>
 							
 						</ul>
+
+
 							<?php $arr_type[]=""; ?>
 							
 						   
 
-						   <?php if( get_field('add_events') ): ?>
+						   <?php if( get_field('add_event_details') ): ?>
 									<h4>Filter by Session Type</h4>
 						   <?php endif; ?>
 
@@ -192,6 +196,9 @@ get_header();?>
 					
 
 				</div>
+
+
+
 				<div class="col-md-9">
 
 						<div class="nav nav-tabs" role="tablist">
