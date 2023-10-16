@@ -137,9 +137,6 @@ function upsert_event_cio($post_id, $row_id, $inputs)
       'add_user_pic_url'    =>  $inputs['image'],
     ]
   ];
-  if(isset($inputs['image']) && $inputs['image']) {
-    $input_fields['add_speakers']['add_speaker_image'] = upload_media($inputs['image'], $post_id);
-  }
   update_custom_fields($post_id, $input_fields, true, $row_id);
 }
 
