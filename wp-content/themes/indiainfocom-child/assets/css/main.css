@@ -1057,6 +1057,9 @@ ul.venue-details::after {
 .post-details img{
     height: 250px; display: inline-block; margin-top: 26px; margin:15px 0 25px;
 }
+.post-details p img{
+	height: auto;
+}
 
 h2.comman-title{
     color:#d51a3c; font-size: 32px; font-weight: 600;
@@ -1948,7 +1951,7 @@ body #caf-filter-layout2 li ul{
   .caf-post-layout1 .manage-layout1{
     position: relative;
     box-shadow: none !important;
-    border: 1px solid #d2d0d0;
+    border: 1px solid #d2d0d0; height: 384px;
   }
 
   .caf-post-layout1 div.caf-meta-content{
