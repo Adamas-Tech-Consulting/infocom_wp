@@ -51,8 +51,8 @@
 
 				<div class="item">
 
-		            <!-- <div class="banner-details banner<?php //echo $i; ?>" style="background: url('<?php echo $backgroundImg['0'];?>')"> -->
-					<div class="banner-details banner<?php echo $i; ?>" style="background: url('<?php the_field('homepage_banner_url'); ?>')">
+		             <div class="banner-details banner<?php echo $i; ?>" style="background: url('<?php echo $backgroundImg['0'];?>')">
+					<!-- <div class="banner-details banner<?php // echo $i; ?>" style="background: url('<?php // the_field('homepage_banner_url'); ?>')"> -->
 
 		                <div class="container">
 

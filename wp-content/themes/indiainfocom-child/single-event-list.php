@@ -13,7 +13,7 @@ get_header();?>
 
 	<section class="banner-area position-relative">
 		<img src="<?php the_field('add_banner'); ?>" class="img-fluid" />
-		<img src="<?php the_field('add_banner_url'); ?>" class="img-fluid" />
+		<!-- <img src="<?php //the_field('add_banner_url'); ?>" class="img-fluid" /> -->
 		
 		<?php if( get_field('add_register_now_link') ): ?>
 
@@ -89,7 +89,7 @@ get_header();?>
 
 						<div class="conference-logo text-center">
 							<img src="<?php the_field('add_conference_logo'); ?>" class="img-fluid" />
-							<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid" />
+							<!-- <img src="<?php // the_field('add_conference_logo_url'); ?>" class="img-fluid" /> -->
 						</div>
 
 						<ul class="list-details">
@@ -273,7 +273,7 @@ get_header();?>
 
 													<div class="col-md-2 align-self-center">
 														<img src="<?php echo $sponser_img;?>" class="img-fluid">
-														<img src="<?php echo $sponser_img_url;?>" class="img-fluid">
+														<!-- <img src="<?php //echo $sponser_img_url;?>" class="img-fluid"> -->
 													</div>
 												</div>
 											</li>
@@ -354,7 +354,7 @@ get_header();?>
 													<div class="col-md-3 my-3">
 														<div class="speaker">
 															<div class="hover-overlay">
-																<img src="<?php echo $add_speaker_image_url; ?>" class="img-fluid" />
+																<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
 																<?php if( get_sub_field('add_linkedin_link') ): ?>
 																	<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
 																<?php endif; ?>
@@ -577,7 +577,7 @@ get_header();?>
 							<div class="col-sm-6 col-md-3">
 								<div class="brand-logo">
 									<a href="#" title="<?php echo $add_sponser_name; ?>">
-										<img class="img-fluid" src="<?php echo $add_sponser_logo_url ; ?>" loading="lazy" alt="brand-logo" width="200" height="135">
+										<img class="img-fluid" src="<?php echo $add_sponser_logo ; ?>" loading="lazy" alt="brand-logo" width="200" height="135">
 									</a>
 								</div>
 							</div>
@@ -612,7 +612,7 @@ get_header();?>
 
 										<div class="col-md-3 px-2 py-2 gallery-item">
 											<div class="hover-overlay">
-												<img src="<?php echo $add_video_thumbnail_url; ?>" class="img-fluid" />
+												<img src="<?php echo $add_video_thumbnail; ?>" class="img-fluid" />
 												<div class="item-overlay"></div>
 
 												<div class="event-img-meta white-color">
