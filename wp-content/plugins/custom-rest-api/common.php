@@ -115,6 +115,26 @@ function upsert_event_speaker($post_id, $row_id, $inputs)
       'add_company_name'    =>  $inputs['company_name'],
       'add_designation'     =>  $inputs['designation'],
       'choose_speaker_type' =>  $inputs['speakers_category'], //KeyNoteSpeaker
+      'add_speaker_image_url' => $inputs['image']
+    ]
+  ];
+  if(isset($inputs['image']) && $inputs['image']) {
+    $input_fields['add_speakers']['add_speaker_image'] = upload_media($inputs['image'], $post_id);
+  }
+  update_custom_fields($post_id, $input_fields, true, $row_id);
+}
+
+function upsert_event_cio($post_id, $row_id, $inputs)
+{
+  $row_id  = $row_id + 1;
+  $input_fields = [
+    'add_cio' => [
+      'add_user_name'       =>  $inputs['name'],
+      'add_user_type'       =>  $inputs['type'],
+      'add_company_name'    =>  $inputs['company_name'],
+      'add_user_designation'=>  $inputs['designation'],
+      'add_linkedin_link'   =>  $inputs['linkedin_url'],
+      'add_user_pic_url'    =>  $inputs['image'],
     ]
   ];
   if(isset($inputs['image']) && $inputs['image']) {
@@ -131,6 +151,7 @@ function upsert_event_sponsor($post_id, $row_id, $inputs)
       'sponsorship_type'    =>  $inputs['sponsorship_type_id'],
       'sponsors_name'       =>  $inputs['sponsor_name'],
       'company_website'     =>  $inputs['website_link'],
+      'sponsor_logo_url'    =>  $inputs['sponsor_logo']
     ]
   ];
   if(isset($inputs['sponsor_logo']) && $inputs['sponsor_logo']) {
