@@ -162,9 +162,9 @@ get_header();?>
 							
 						   
 
-						   <?php if( get_field('add_event_details') ): ?>
+						   
 									<h4>Filter by Session Type</h4>
-						   <?php endif; ?>
+						   
 
 						<ul class="session-type">
 
