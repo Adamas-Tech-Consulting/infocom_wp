@@ -41,7 +41,15 @@ get_header(); ?>
 								<h4>
 									<a href="<?php the_permalink();?>">
 										<?php the_title(); ?> <br/> 
-										<em><?php echo get_the_excerpt();?></em>
+										<em>
+
+										<?php if ( ! has_excerpt() ) {
+											echo '';
+										} else { 
+											echo get_the_excerpt();
+										}?>
+
+                                        </em>
 									</a>
 								</h4>
 								
@@ -64,6 +72,9 @@ get_header(); ?>
 	</div>
 </section>
 
+
+
+<?php if( get_field('add_video') ): ?>
 
 <section class="session-videos white-bg wow fadeInUp">
 	<div class="container">
@@ -142,6 +153,8 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+
+<?php endif; ?>
 
 
 <section class="all-blogs wow fadeInUp d-none">

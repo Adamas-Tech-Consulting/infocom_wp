@@ -441,121 +441,116 @@ get_header();?>
 	<?php endif; ?>
 
 
-
-
-
 	<?php if( get_field('add_cio') ): ?>
 
-		
+        <section id="cio" class="cheif-speakers">
+			<div class="container">
 
-<section id="cio" class="cheif-speakers">
-	<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>CIO / CISO</h2>
+							<div class="tab-content1">
+									
+									
+									<!-- <div class="tab-pane fade show active" id="nav-highlight" role="tabpanel"> -->
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2>CIO / CISO</h2>
-					<div class="tab-content1">
-							
-							
-							<!-- <div class="tab-pane fade show active" id="nav-highlight" role="tabpanel"> -->
-
-									<div class="row">
-											<?php $i=1; while( have_rows('add_cio') ): the_row(); 
-												$add_speaker_image = get_sub_field('add_user_pic_url');
-												$add_speaker_name = get_sub_field('add_user_name');
-												$add_company_name = get_sub_field('add_company_name');
-												$add_designation = get_sub_field('add_user_designation');
-												$options = get_sub_field('add_user_type');
-												$linkedin = get_sub_field('add_linkedin_link');
-											?>
-											
+											<div class="row">
+													<?php $i=1; while( have_rows('add_cio') ): the_row(); 
+														$add_speaker_image = get_sub_field('add_user_pic_url');
+														$add_speaker_name = get_sub_field('add_user_name');
+														$add_company_name = get_sub_field('add_company_name');
+														$add_designation = get_sub_field('add_user_designation');
+														$options = get_sub_field('add_user_type');
+														$linkedin = get_sub_field('add_linkedin_link');
+													?>
 													
-										<div class="col-md-3 my-3">
-											<div class="speaker">
-												<div class="hover-overlay">
-													<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
-													<?php if( get_sub_field('add_linkedin_link') ): ?>
-														<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
-													<?php endif; ?>
-													
+															
+												<div class="col-md-3 my-3">
+													<div class="speaker">
+														<div class="hover-overlay">
+															<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+															<?php if( get_sub_field('add_linkedin_link') ): ?>
+																<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
+															<?php endif; ?>
+															
+															</div>
+														<div class="speaker-meta">                                                  
+															<h5 class=""><?php echo $add_speaker_name; ?></h5>
+															<span class=""><?php echo $add_designation; ?></span>
+															<p class=""><?php echo $add_company_name; ?></p>
+															
+														</div>
 													</div>
-												<div class="speaker-meta">                                                  
-													<h5 class=""><?php echo $add_speaker_name; ?></h5>
-													<span class=""><?php echo $add_designation; ?></span>
-													<p class=""><?php echo $add_company_name; ?></p>
-													
 												</div>
+															
+													<?php $i++; endwhile; ?>
 											</div>
-										</div>
-													
+									<!-- </div> -->
+
+
+									<div class="tab-pane fade d-none" id="nav-key" role="tabpanel">
+										<div class="row">
+											<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
+												$add_speaker_image = get_sub_field('add_speaker_image');
+												$add_speaker_name = get_sub_field('add_speaker_name');
+												$add_company_name = get_sub_field('add_company_name');
+												$add_designation = get_sub_field('add_designation');
+												$options = get_sub_field('choose_speaker_type');
+											?>
+													<?php if( $options && in_array('KeyNoteSpeaker', $options) ) { ?>
+														<div class="col-md-3">
+															<div class="speaker">
+																<div class="hover-overlay">
+																	<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+																</div>
+																<div class="speaker-meta">                                                  
+																	<h5 class=""><?php echo $add_speaker_name; ?></h5>
+																	<span class=""><?php echo $add_designation; ?></span>
+																	<p class=""><?php echo $add_company_name; ?></p>
+																	
+																</div>
+															</div>
+														</div>
+													<?php } ?>
 											<?php $i++; endwhile; ?>
+										</div>
 									</div>
-							<!-- </div> -->
 
 
-							<div class="tab-pane fade d-none" id="nav-key" role="tabpanel">
-								<div class="row">
-									<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
-										$add_speaker_image = get_sub_field('add_speaker_image');
-										$add_speaker_name = get_sub_field('add_speaker_name');
-										$add_company_name = get_sub_field('add_company_name');
-										$add_designation = get_sub_field('add_designation');
-										$options = get_sub_field('choose_speaker_type');
-									?>
-											<?php if( $options && in_array('KeyNoteSpeaker', $options) ) { ?>
-												<div class="col-md-3">
-													<div class="speaker">
-														<div class="hover-overlay">
-															<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+									<div class="tab-pane fade d-none" id="nav-regular" role="tabpanel">
+										<div class="row">
+											<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
+												$add_speaker_image = get_sub_field('add_speaker_image');
+												$add_speaker_name = get_sub_field('add_speaker_name');
+												$add_company_name = get_sub_field('add_company_name');
+												$add_designation = get_sub_field('add_designation');
+												$options = get_sub_field('choose_speaker_type');
+											?>
+													<?php if( $options && in_array('Regular', $options) ) { ?>
+														<div class="col-md-3">
+															<div class="speaker">
+																<div class="hover-overlay">
+																	<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+																</div>
+																<div class="speaker-meta">                                                  
+																	<h5 class=""><?php echo $add_speaker_name; ?></h5>
+																	<span class=""><?php echo $add_designation; ?></span>
+																	<p class=""><?php echo $add_company_name; ?></p>
+																	
+																</div>
+															</div>
 														</div>
-														<div class="speaker-meta">                                                  
-															<h5 class=""><?php echo $add_speaker_name; ?></h5>
-															<span class=""><?php echo $add_designation; ?></span>
-															<p class=""><?php echo $add_company_name; ?></p>
-															
-														</div>
-													</div>
-												</div>
-											<?php } ?>
-									<?php $i++; endwhile; ?>
-								</div>
+													<?php } ?>
+											<?php $i++; endwhile; ?>
+										</div>
+									</div>
+									
 							</div>
-
-
-							<div class="tab-pane fade d-none" id="nav-regular" role="tabpanel">
-								<div class="row">
-									<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
-										$add_speaker_image = get_sub_field('add_speaker_image');
-										$add_speaker_name = get_sub_field('add_speaker_name');
-										$add_company_name = get_sub_field('add_company_name');
-										$add_designation = get_sub_field('add_designation');
-										$options = get_sub_field('choose_speaker_type');
-									?>
-											<?php if( $options && in_array('Regular', $options) ) { ?>
-												<div class="col-md-3">
-													<div class="speaker">
-														<div class="hover-overlay">
-															<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
-														</div>
-														<div class="speaker-meta">                                                  
-															<h5 class=""><?php echo $add_speaker_name; ?></h5>
-															<span class=""><?php echo $add_designation; ?></span>
-															<p class=""><?php echo $add_company_name; ?></p>
-															
-														</div>
-													</div>
-												</div>
-											<?php } ?>
-									<?php $i++; endwhile; ?>
-								</div>
-							</div>
-							
+						
 					</div>
-				
+				</div>
 			</div>
-		</div>
-	</div>
-</section>
+		</section>
 
 <?php endif; ?>
 
