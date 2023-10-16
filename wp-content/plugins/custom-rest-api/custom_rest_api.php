@@ -75,6 +75,7 @@ function create_post(WP_REST_Request $request)
     'add_theme' => $request['event_theme'],
     'add_conference_details' => $request['event_description'],
     'add_conference_logo' => $logo_id,
+    'add_conference_logo_url' => $request['event_logo'],
     'add_register_now_link' => $request['registration_link'],
   ];
   update_custom_fields($post_id, $input_fields);
@@ -131,6 +132,7 @@ function update_post(WP_REST_Request $request)
     'add_venue' => $request['event_venue'],
     'add_theme' => $request['event_theme'],
     'add_conference_details' => $request['event_description'],
+    'add_conference_logo_url' => $request['event_logo'],
     'add_register_now_link' => $request['registration_link'],
   ];
   if(isset($request['event_banner']) && $request['event_banner']) {
@@ -147,6 +149,7 @@ function update_post(WP_REST_Request $request)
   delete_custom_fields($post_id, 'add_speakers');
   delete_custom_fields($post_id, 'add_sponsers');
   delete_custom_fields($post_id, 'add_event_details');
+  delete_custom_fields($post_id, 'event_cios');
   if(isset($request['event_speakers']) && $request['event_speakers']) {
     foreach($request['event_speakers'] as $key => $event_speaker)
     {
