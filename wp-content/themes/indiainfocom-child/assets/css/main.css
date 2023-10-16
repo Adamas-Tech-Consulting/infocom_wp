@@ -420,7 +420,7 @@ footer.site-footer ul.foot-menu li a{
 
 
 .banner-details{
-    background-size: cover;
+    background-size: cover !important;
     position: relative;
     color: var(--white); height: 570px;
     padding: 6.7% 0; background-repeat: no-repeat !important;
@@ -2054,6 +2054,10 @@ body .caf-post-layout1 #manage-post-area:before{
 
   .banner-area  a.register-now{
     position: absolute; right: 5%; top:50%; transform: translateY(-50%);
+  }
+
+  .banner-area img{
+    width: 100%;
   }
 
   body #caf-filter-layout2 li.init{

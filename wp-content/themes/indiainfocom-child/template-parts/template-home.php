@@ -41,7 +41,15 @@ get_header(); ?>
 								<h4>
 									<a href="<?php the_permalink();?>">
 										<?php the_title(); ?> <br/> 
-										<em><?php echo get_the_excerpt();?></em>
+										<em>
+
+										<?php if ( ! has_excerpt() ) {
+											echo '';
+										} else { 
+											echo get_the_excerpt();
+										}?>
+
+                                        </em>
 									</a>
 								</h4>
 								
@@ -64,6 +72,9 @@ get_header(); ?>
 	</div>
 </section>
 
+
+
+<?php if( get_field('add_video') ): ?>
 
 <section class="session-videos white-bg wow fadeInUp">
 	<div class="container">
@@ -143,8 +154,10 @@ get_header(); ?>
 	</div>
 </section>
 
+<?php endif; ?>
 
-<section class="all-blogs wow fadeInUp">
+
+<section class="all-blogs wow fadeInUp d-none">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -201,7 +214,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="testiminials text-center  wow fadeInUp" style="background: url('<?php the_field('add_testi_bg','option') ?>') no-repeat; ">
+<section class="testiminials d-none text-center  wow fadeInUp" style="background: url('<?php the_field('add_testi_bg','option') ?>') no-repeat; ">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
