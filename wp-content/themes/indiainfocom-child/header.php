@@ -61,9 +61,14 @@
 								<div class="col-md-12 text-center">
 									<div class="logo-sec">
 										<img src="<?php the_field('add_conference_logo'); ?>" class="img-fluid" />
-										<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid" />
+										<!-- <img src="<?php //the_field('add_conference_logo_url'); ?>" class="img-fluid" /> -->
 									</div>
-									<h2><?php the_title();?> <?php echo get_the_excerpt(); ?></h2>
+									<h2><?php the_title();?> <?php if ( ! has_excerpt() ) {
+											echo '';
+										} else { 
+											echo get_the_excerpt();
+										}?>
+										 ?></h2>
 									<h3><?php the_field('add_date'); ?> | <?php the_field('add_venue'); ?></h3>
 									<a href="<?php the_permalink();?>" class="explore-now">Explore Now</a>
 									

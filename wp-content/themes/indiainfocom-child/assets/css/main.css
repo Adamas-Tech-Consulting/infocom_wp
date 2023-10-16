@@ -420,7 +420,7 @@ footer.site-footer ul.foot-menu li a{
 
 
 .banner-details{
-    background-size: cover !important;
+    background-size: cover !important; 
     position: relative;
     color: var(--white); height: 570px;
     padding: 6.7% 0; background-repeat: no-repeat !important;
@@ -778,7 +778,7 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
     font-size: 24px;
     padding: 25px 18px;
     text-align: left;
-    background: #fff; position: relative; height: 162px;
+    background: #fff; position: relative; height: 200px;
 }
 
 .conference-item .content-sec:after{
@@ -1841,6 +1841,10 @@ height: 17px;
     -o-transition: all 250ms ease-in-out;
     -ms-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
+    height: 242px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .brand-logo .img-fluid {
