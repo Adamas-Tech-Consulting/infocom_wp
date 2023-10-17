@@ -2256,7 +2256,7 @@ body .caf-post-layout1 #manage-post-area:before{
 }
 
 .cio-banner .blog-cover{
-	box-shadow: none;
+	box-shadow: none; text-align: left;
 }
 
 .cio-banner .blog-cover:hover{
@@ -2271,7 +2271,7 @@ body .caf-post-layout1 #manage-post-area:before{
 }
 
 div.cio-content{
-	margin:140px 0 50px;
+	margin:180px 0 50px;
 } 
 
 .negative-space .blog-cover h3{
