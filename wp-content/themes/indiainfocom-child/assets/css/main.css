@@ -873,7 +873,7 @@ box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 } */
 
 .blog-cover h3{
-    font-size: 22px; font-weight: 900; color: rgb(34, 34, 34); margin:0 0 15px;
+    font-size: 24px; font-weight: 900; color: rgb(34, 34, 34); margin:0 0 15px;
     padding: 10px; background: #fafafa;
 }
 
@@ -2275,5 +2275,5 @@ div.cio-content{
 } 
 
 .negative-space .blog-cover h3{
-	background: none; padding: 0;
+	background: none; padding: 0 0 0 15px;
 }
