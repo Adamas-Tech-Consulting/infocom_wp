@@ -2243,3 +2243,11 @@ body .caf-post-layout1 #manage-post-area:before{
     max-width: 100% !important;
     background-color: #cccccc3d !important;
 }*/
+
+.blog-cover span{
+	display: block; color: var(--primary);
+}
+
+.blog-cover strong{
+	display: block;
+}

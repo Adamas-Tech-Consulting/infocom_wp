@@ -34,19 +34,19 @@ get_header(); ?>
 
 						<div class="col-md-4 mb-4">
 					 		<div class="blog-cover">
-								
+							 <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
 								<div class="pic">
 									<a href="<?php the_permalink();?>">
-										<?php the_post_thumbnail(); ?>
+										<img src="<?php the_field('add_profile_picture');?>" class="img-fluid" />
 									</a>
 								</div>
 
-								<h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-								<span>Designation</span>
-					             <strong>Company Name</strong>
-					 			<em>Location</em>
+								
+								<span><?php the_field('add_designation');?></span>
+					             <strong><?php the_field('add_company_name');?></strong>
+					 			<em><?php the_field('add_location');?></em>
 
-								<a href="#" class="more-details">More Details</a>
+								<a href="<?php the_permalink();?>" class="more-details">More Details</a>
 							</div>
 						</div>
 						
