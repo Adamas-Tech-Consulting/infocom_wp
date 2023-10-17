@@ -820,7 +820,7 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 .conference-item  .slick-list .pic-sec{
     margin-bottom: 0;
     background: #cccccc3d;
-    padding: 5px;
+    padding: 5px; height: 260px;
 }
 
 
@@ -2202,6 +2202,10 @@ body .caf-post-layout1 #manage-post-area:before{
 
 .data-target-div1 .caf-post-layout1 .caf-post-title h2, .data-target-div1 .caf-post-layout1 .caf-post-title h2 a{
     line-height: 24px !important;
+}
+
+.caf-post-layout1 div.caf-featured-img-box{
+	height: 280px;
 }
 
 /*.caf-post-layout1 div.caf-featured-img-box {
