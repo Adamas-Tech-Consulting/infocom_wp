@@ -2248,11 +2248,11 @@ body .caf-post-layout1 #manage-post-area:before{
 }*/
 
 .blog-cover span{
-	display: block; color: var(--primary); font-size:22px;
+	display: block; color: var(--primary); font-size:22px; padding: 0 15px;
 }
 
 .blog-cover strong, .blog-cover em{
-	display: block;
+	display: block; padding: 0 15px;
 }
 
 .cio-banner .blog-cover{
