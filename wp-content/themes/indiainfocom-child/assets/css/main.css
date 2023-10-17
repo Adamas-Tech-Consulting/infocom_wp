@@ -2201,7 +2201,7 @@ body .caf-post-layout1 #manage-post-area:before{
 }
 
 .event-info.left ul{
-	list-style: disc; margin:10px 0;
+	list-style: disc; margin:10px 0; list-style-position: inside;
 }
 
 .event-info.left ul li{

@@ -177,15 +177,15 @@ function brandinsight_post_type() {
                 'supports'      => array('title', 'author', 'thumbnail', 'editor','custom-field', 'excerpt','tags','comments','categories')
         );
 
-        $digital_labels = array(
-            'add_new_item'  => 'Add New Digital Transformation',
-            'edit_item'     => 'Edit Digital Transformation',
-            'search_items'  => 'Search Digital Transformation'
+        $cio_labels = array(
+            'add_new_item'  => 'Add New Cio',
+            'edit_item'     => 'Edit Cio',
+            'search_items'  => 'Search Cio'
         );
-        $digital_list = array(
+        $cio_list = array(
                 'public'        => true,
-                'label'         => 'Digital Transformation',
-                'labels'        =>  $digital_labels,
+                'label'         => 'Cio wall',
+                'labels'        =>  $cio_labels,
                 'supports'      => array('title', 'author', 'thumbnail', 'editor','custom-field', 'excerpt','tags','comments','categories')
         );
 
@@ -243,7 +243,7 @@ function brandinsight_post_type() {
      register_post_type( 'event-list', $event_list );
      //register_post_type( 'testi', $testi_list );
      register_post_type( 'sess-video', $video_list );
-     // register_post_type( 'digital', $digital_list );
+      register_post_type( 'ciolist', $cio_list );
      // register_post_type( 'business', $business_list );
      // register_post_type( 'tech', $tech_list );
      // register_post_type( 'team', $team_list );
