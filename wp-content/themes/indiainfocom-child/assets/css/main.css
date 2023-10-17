@@ -2265,10 +2265,15 @@ body .caf-post-layout1 #manage-post-area:before{
 
 .negative-space {
     position: absolute;
-    left: 10%;
+    left: inherit;
     top: 43%;
+    width: 80%;
 }
 
 div.cio-content{
 	margin:140px 0 50px;
 } 
+
+.negative-space .blog-cover h3{
+	background: none; padding: 0;
+}
