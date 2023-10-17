@@ -758,13 +758,14 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 
 .blog-cover{
     background: #fff;
-    padding: 15px;
+    padding: 0;
     box-shadow: 0 4px 16px rgba(0,0,0,25%);
     transition: all 500ms ease-in-out;
     -ms-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
     -webkit-transition: all 500ms ease-in-out;
+    text-align: center;
 }
 
 .blog-cover:hover{
@@ -873,6 +874,7 @@ box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 
 .blog-cover h3{
     font-size: 22px; font-weight: 900; color: rgb(34, 34, 34); margin:0 0 15px;
+    padding: 10px; background: #fafafa;
 }
 
 .blog-cover h3 a{
@@ -880,7 +882,7 @@ box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 }
 
 .blog-cover .pic{
-    margin:0; display: block; text-align: center; position: relative;
+    margin:0 0 20px; display: block; text-align: center; position: relative;
 }
 
 .blog-cover .pic span{
@@ -909,6 +911,7 @@ box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 .blog-cover .more-details{
     display: inline-block; border-radius:5px; padding: 8px 15px; 
     color: #fff; border:1px solid #d51a3c; color:#d51a3c;
+    margin:20px 0;
 }
 
 .blog-cover .more-details:hover{
@@ -2245,9 +2248,9 @@ body .caf-post-layout1 #manage-post-area:before{
 }*/
 
 .blog-cover span{
-	display: block; color: var(--primary);
+	display: block; color: var(--primary); font-size:22px;
 }
 
-.blog-cover strong{
+.blog-cover strong, .blog-cover em{
 	display: block;
 }
