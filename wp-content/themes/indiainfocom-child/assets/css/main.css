@@ -2200,6 +2200,18 @@ body .caf-post-layout1 #manage-post-area:before{
     color: var(--pink);
 }
 
+.event-info.left ul{
+	list-style: disc; margin:10px 0;
+}
+
+.event-info.left ul li{
+	margin:0 0 10px;
+}
+
+.event-info.left ul li ul {
+	padding-left: 15px;
+}
+
 .data-target-div1 .caf-post-layout1 .caf-post-title h2, .data-target-div1 .caf-post-layout1 .caf-post-title h2 a{
     line-height: 24px !important;
 }
