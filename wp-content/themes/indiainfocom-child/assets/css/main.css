@@ -758,7 +758,7 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
 
 .blog-cover{
     background: #fff;
-    padding: 0;
+    padding: 15px 0;
     box-shadow: 0 4px 16px rgba(0,0,0,25%);
     transition: all 500ms ease-in-out;
     -ms-transition: all 500ms ease-in-out;
