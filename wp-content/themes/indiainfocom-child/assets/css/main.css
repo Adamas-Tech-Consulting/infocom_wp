@@ -2254,3 +2254,21 @@ body .caf-post-layout1 #manage-post-area:before{
 .blog-cover strong, .blog-cover em{
 	display: block;
 }
+
+.cio-banner .blog-cover{
+	box-shadow: none;
+}
+
+.cio-banner .blog-cover:hover{
+	transform: scale(1);
+}
+
+.negative-space {
+    position: absolute;
+    left: 10%;
+    top: 43%;
+}
+
+div.cio-content{
+	margin:140px 0 50px;
+} 
