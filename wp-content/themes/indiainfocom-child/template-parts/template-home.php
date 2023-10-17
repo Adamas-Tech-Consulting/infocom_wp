@@ -19,7 +19,7 @@ get_header(); ?>
 					<?php $args = array(
 			            'post_type' => 'event-list',
 			            'posts_per_page' => -1,
-			            'order' => 'ASC',
+			            'order' => 'DESC',
 			         );
 			            $slider = new WP_Query($args);
 			         ?>
@@ -30,10 +30,10 @@ get_header(); ?>
 
 
 						<div class="item">
-							<div class="pic-sec">
+							<div class="pic-sec" style="background:url('<?php the_field('add_conference_logo');?>');">
 								<a href="<?php the_permalink();?>">
 									<?php // the_post_thumbnail(); ?>
-									<img src="<?php the_field('add_conference_logo');?>" />
+									<!-- <img src="<?php // the_field('add_conference_logo');?>" /> -->
 									<span><?php the_field('add_date'); ?></span>
 								</a>
 							</div>

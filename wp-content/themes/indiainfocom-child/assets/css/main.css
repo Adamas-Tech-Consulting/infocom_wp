@@ -2197,3 +2197,27 @@ body .caf-post-layout1 #manage-post-area:before{
 .data-target-div1 .caf-post-layout1 .caf-post-title h2, .data-target-div1 .caf-post-layout1 .caf-post-title h2 a{
     line-height: 24px !important;
 }
+
+.caf-post-layout1 .caf-featured-img-box {
+    display: block;
+    width: 100%;
+    height: 260px;
+    background-size: 60%!important;
+    background-repeat: no-repeat !important;
+    background-position: center!important;
+    object-fit: cover;
+    max-width: 100% !important;
+    background-color: #cccccc3d !important;
+}
+
+.conference-item .slick-list .pic-sec{
+	display: block;
+    width: 100%;
+    height: 260px !important;
+    background-size: 60%!important;
+    background-repeat: no-repeat !important;
+    background-position: center!important;
+    object-fit: cover;
+    max-width: 100% !important;
+    background-color: #cccccc3d !important;
+}
