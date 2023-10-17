@@ -765,7 +765,7 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
     -o-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
     -webkit-transition: all 500ms ease-in-out;
-    text-align: center;
+    text-align: center; height: 100%;
 }
 
 .blog-cover:hover{
