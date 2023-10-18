@@ -35,8 +35,8 @@ get_header();?>
 						<?php if( get_field('add_speakers') ): ?><li><a href="#speaker">Speakers</a></li> <?php endif; ?>
 						<?php if( get_field('add_sponsers') ): ?><li><a href="#sponser">Sponsors</a></li><?php endif; ?>
 						<?php if( get_field('add_cio') ): ?><li><a href="#cio-ciso">Cio / Ciso</a></li><?php endif; ?>
-						<!-- <li><a href="#video">Videos</a></li>
-						<li><a href="#testimonial">Testimonials</a></li> -->
+						<?php if( get_field('add_you_tube_link') ): ?>	 <li><a href="#video">Videos</a></li> <?php endif; ?>
+						<!-- <li><a href="#testimonial">Testimonials</a></li> -->
 					</ul>
 				</div>
 			</div>
@@ -598,7 +598,7 @@ get_header();?>
 
 	<?php endif; ?>
 
-	<?php if( get_field('add_conference_videos') ): ?>
+	<?php if( get_field('add_you_tube_link') ): ?>
 
 		<section id="video" class="session-videos white-bg wow fadeInUp" style="background:#ffffff;">
 			<div class="container">

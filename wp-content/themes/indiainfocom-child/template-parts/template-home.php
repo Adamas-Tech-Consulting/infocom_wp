@@ -74,7 +74,7 @@ get_header(); ?>
 
 
 
-<?php if( get_field('add_video') ): ?>
+<?php if( get_field('add_you_tube_link') ): ?>
 
 <section class="session-videos white-bg wow fadeInUp">
 	<div class="container">
