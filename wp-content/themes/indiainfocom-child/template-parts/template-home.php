@@ -74,7 +74,7 @@ get_header(); ?>
 
 
 
-<?php if( get_field('add_you_tube_link') ): ?>
+<?php if( get_sub_field('add_you_tube_link') ): ?>
 
 <section class="session-videos white-bg wow fadeInUp">
 	<div class="container">
@@ -265,5 +265,7 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+
+
 	
 <?php get_footer();
