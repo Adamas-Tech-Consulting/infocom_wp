@@ -73,9 +73,6 @@ get_header(); ?>
 </section>
 
 
-
-<?php if( get_field('add_conference_videos') ): ?>
-
 <section class="session-videos white-bg wow fadeInUp">
 	<div class="container">
 		<div class="row">
@@ -117,7 +114,7 @@ get_header(); ?>
 	
 													<div class="event-img-meta white-color">
 														<h5><?php echo $add_video_name; ?></h5>   
-																<span> <?php echo get_the_excerpt(); ?> </span>
+																<!-- <span> <?php //echo get_the_excerpt(); ?> </span> -->
 																<p>[ <?php echo $add_video_date; ?> ]</p>
 													</div>
 	
@@ -153,8 +150,6 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
-
-<?php endif; ?>
 
 
 <section class="all-blogs wow fadeInUp d-none">

@@ -35,7 +35,7 @@ get_header();?>
 						<?php if( get_field('add_speakers') ): ?><li><a href="#speaker">Speakers</a></li> <?php endif; ?>
 						<?php if( get_field('add_sponsers') ): ?><li><a href="#sponser">Sponsors</a></li><?php endif; ?>
 						<?php if( get_field('add_cio') ): ?><li><a href="#cio-ciso">Cio / Ciso</a></li><?php endif; ?>
-						<?php if( get_field('add_you_tube_link') ): ?>	 <li><a href="#video">Videos</a></li> <?php endif; ?>
+						<?php if( get_field('add_conference_videos') ): ?>	 <li><a href="#video">Videos</a></li> <?php endif; ?>
 						<!-- <li><a href="#testimonial">Testimonials</a></li> -->
 					</ul>
 				</div>
@@ -625,7 +625,7 @@ get_header();?>
 
 												<div class="event-img-meta white-color">
 													<h5><?php echo $add_video_name; ?></h5>   
-															<span> <?php echo get_the_excerpt(); ?> </span>
+															<!-- <span> <?php // echo get_the_excerpt(); ?> </span> -->
 															<p>[ <?php echo $add_video_date; ?> ]</p>
 												</div>
 
