@@ -34,6 +34,7 @@ get_header();?>
 						<li class="d-none"><a href="#map">Map</a></li>
 						<?php if( get_field('add_speakers') ): ?><li><a href="#speaker">Speakers</a></li> <?php endif; ?>
 						<?php if( get_field('add_sponsers') ): ?><li><a href="#sponser">Sponsors</a></li><?php endif; ?>
+						<?php if( get_field('add_cio') ): ?><li><a href="#cio-ciso">Cio / Ciso</a></li><?php endif; ?>
 						<!-- <li><a href="#video">Videos</a></li>
 						<li><a href="#testimonial">Testimonials</a></li> -->
 					</ul>
@@ -450,7 +451,7 @@ get_header();?>
 
 	<?php if( get_field('add_cio') ): ?>
 
-        <section id="cio" class="cheif-speakers">
+        <section id="cio-ciso" class="cheif-speakers">
 			<div class="container">
 
 				<div class="row">
