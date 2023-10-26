@@ -89,7 +89,7 @@ get_header();?>
 						
 
 						<div class="conference-logo text-center">
-							<!-- <img src="<?php the_field('add_conference_logo'); ?>" class="img-fluid" /> -->
+							<!-- <img src="<?php //the_field('add_conference_logo'); ?>" class="img-fluid" /> -->
 							<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid" />
 						</div>
 
@@ -366,7 +366,7 @@ get_header();?>
 															<div class="col-md-3 my-3">
 																<div class="speaker">
 																	<div class="hover-overlay">
-																		<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+																		<img src="<?php echo $add_speaker_image_url; ?>" class="img-fluid" />
 																		<?php if( get_sub_field('add_linkedin_link') ): ?>
 																			<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
 																		<?php endif; ?>

@@ -52,16 +52,16 @@
 				<div class="item">
 
 		             <!-- <div class="banner-details banner<?php // echo $i; ?>" style="background: url('<?php // echo $backgroundImg['0'];?>')"> -->
-					 <div class="banner-details banner<?php echo $i; ?>" style="background: url('<?php the_field('homepage_banner_url'); ?>')"> -->
+					 <div class="banner-details banner" style="background: url('<?php the_field('homepage_banner_url'); ?>')">
 
 		                <div class="container">
 
 		                    <div class="row">
 		                      
 								<div class="col-md-12 text-center">
-									<div class="logo-sec 111">
+									<div class="logo-sec">
 										<!-- <img src="<?php // the_field('add_conference_logo'); ?>" class="img-fluid" /> -->
-										<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid aaa" />
+										<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid" />
 									</div>
 									<h2><?php the_title();?> <?php if ( ! has_excerpt() ) {
 											echo '';

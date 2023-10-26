@@ -1875,7 +1875,7 @@ select.year-filter{
 }
 
 .event-info.right{
-    background: var(--light-grey);
+    background: var(--light-grey); position: sticky; top:170px;
 }
 
 .back-bttn{

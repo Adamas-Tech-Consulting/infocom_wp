@@ -30,7 +30,7 @@ get_header(); ?>
 
 
 						<div class="item">
-							<div class="pic-sec" style="background:url('<?php the_field('add_conference_logo');?>');">
+							<div class="pic-sec" style="background:url('<?php the_field('add_conference_logo_url');?>');">
 								<a href="<?php the_permalink();?>">
 									<?php // the_post_thumbnail(); ?>
 									<!-- <img src="<?php // the_field('add_conference_logo');?>" /> -->
