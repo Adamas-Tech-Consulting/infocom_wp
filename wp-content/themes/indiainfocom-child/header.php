@@ -59,9 +59,9 @@
 		                    <div class="row">
 		                      
 								<div class="col-md-12 text-center">
-									<div class="logo-sec">
+									<div class="logo-sec 111">
 										<!-- <img src="<?php // the_field('add_conference_logo'); ?>" class="img-fluid" /> -->
-										<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid" />
+										<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid aaa" />
 									</div>
 									<h2><?php the_title();?> <?php if ( ! has_excerpt() ) {
 											echo '';
