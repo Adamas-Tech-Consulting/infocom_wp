@@ -822,9 +822,9 @@ top: 9px; box-shadow: inset 4px -5px 4px 0px #bdbdbd9c;
     margin-bottom: 0;
     background: #cccccc3d;
     padding: 5px; height: 260px;
-    background-repeat: no-repeat !important;	
+    background-repeat: no-repeat !important;
+    background-position: center !important;
 }
-
 
 
 .all-blogs{
@@ -1506,7 +1506,7 @@ ol.tabular-agenda hr{
     -webkit-transition: transform 400ms;
     -o-transition: transform 400ms;
     transition: transform 400ms;
-    height: 285px;
+    height: 285px; width: 100%;
 }
 
 /* .speaker:hover .hover-overlay > img, .gallery-item:hover img{

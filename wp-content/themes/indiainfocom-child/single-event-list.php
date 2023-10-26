@@ -12,8 +12,8 @@
 get_header();?>
 
 	<section class="banner-area position-relative">
-		<img src="<?php the_field('add_banner'); ?>" class="img-fluid" />
-		<!-- <img src="<?php //the_field('add_banner_url'); ?>" class="img-fluid" /> -->
+		<!-- <img src="<?php //the_field('add_banner'); ?>" class="img-fluid" /> -->
+		<img src="<?php the_field('add_banner_url'); ?>" class="img-fluid" /> 
 		
 		<?php if( get_field('add_register_now_link') ): ?>
 
@@ -89,8 +89,8 @@ get_header();?>
 						
 
 						<div class="conference-logo text-center">
-							<img src="<?php the_field('add_conference_logo'); ?>" class="img-fluid" />
-							<!-- <img src="<?php // the_field('add_conference_logo_url'); ?>" class="img-fluid" /> -->
+							<!-- <img src="<?php the_field('add_conference_logo'); ?>" class="img-fluid" /> -->
+							<img src="<?php the_field('add_conference_logo_url'); ?>" class="img-fluid" />
 						</div>
 
 						<ul class="list-details">
@@ -348,7 +348,10 @@ get_header();?>
 										<!-- <div class="tab-pane fade show active" id="nav-highlight" role="tabpanel"> -->
 
 												<div class="row">
-														<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
+														<?php 
+														   $repeater  = get_field('add_speakers');
+														    $i=1; while( have_rows('add_speakers') ): the_row(); 
+														   
 															$add_speaker_image = get_sub_field('add_speaker_image');
 															$add_speaker_image_url = get_sub_field('add_speaker_image_url');
 															$add_speaker_name = get_sub_field('add_speaker_name');
@@ -356,26 +359,29 @@ get_header();?>
 															$add_designation = get_sub_field('add_designation');
 															$options = get_sub_field('choose_speaker_type');
 															$linkedin = get_sub_field('add_linkedin_link');
+															
 														?>
+
 														
-																
-													<div class="col-md-3 my-3">
-														<div class="speaker">
-															<div class="hover-overlay">
-																<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
-																<?php if( get_sub_field('add_linkedin_link') ): ?>
-																	<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
-																<?php endif; ?>
-																
+															<div class="col-md-3 my-3">
+																<div class="speaker">
+																	<div class="hover-overlay">
+																		<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+																		<?php if( get_sub_field('add_linkedin_link') ): ?>
+																			<a href="<?php echo $linkedin; ?>" class="linkedin-url" target="_blank"><i class="fa fa-linkedin"></i></a>
+																		<?php endif; ?>
+																		
+																		</div>
+																	<div class="speaker-meta">                                                  
+																		<h5 class=""><?php echo $add_speaker_name; ?></h5>
+																		<span class=""><?php echo $add_designation; ?></span>
+																		<p class=""><?php echo $add_company_name; ?></p>
+																		
+																	</div>
 																</div>
-															<div class="speaker-meta">                                                  
-																<h5 class=""><?php echo $add_speaker_name; ?></h5>
-																<span class=""><?php echo $add_designation; ?></span>
-																<p class=""><?php echo $add_company_name; ?></p>
-																
 															</div>
-														</div>
-													</div>
+
+														
 																
 														<?php $i++; endwhile; ?>
 												</div>
@@ -585,7 +591,7 @@ get_header();?>
 							<div class="col-sm-6 col-md-3">
 								<div class="brand-logo">
 									<a href="#" title="<?php echo $add_sponser_name; ?>">
-										<img class="img-fluid" src="<?php echo $add_sponser_logo ; ?>" loading="lazy" alt="brand-logo" width="200" height="135">
+										<img class="img-fluid" src="<?php echo $add_sponser_logo_url; ?>" loading="lazy" alt="brand-logo" width="200" height="135">
 									</a>
 								</div>
 							</div>
