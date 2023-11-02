@@ -2076,7 +2076,7 @@ body .caf-post-layout1 #manage-post-area:before{
   }
 
   body.home div.banner-item .slick-slide[data-slick-index="0"] a.register-now{
-    display: block;
+    display: inline-block;
   }
 
   body.infocom-calcutta-2023 .banner-area  a.register-now{
