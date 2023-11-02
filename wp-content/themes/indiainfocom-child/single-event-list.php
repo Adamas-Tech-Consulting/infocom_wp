@@ -18,7 +18,7 @@ get_header();?>
 		<?php if( get_field('add_register_now_link') ): ?>
 
 			<?php  $currentdate = date('Y-m-d'); 
-				// echo  $currentdate;
+				// echo  $currentdate; 
 
 				if($currentdate < the_field('add_date'))
 			?>
