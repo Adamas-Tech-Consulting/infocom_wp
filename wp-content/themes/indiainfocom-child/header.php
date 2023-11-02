@@ -75,7 +75,7 @@
 
 									<?php if( get_field('add_register_now_link') ): ?>
 
-									   <a href="#" class="register-now">Register Now</a>
+									   <a href="<?php the_field('add_register_now_link')?>" class="register-now">Register Now</a>
 
 									<?php endif; ?>
 								</div>
