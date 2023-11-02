@@ -2075,6 +2075,14 @@ body .caf-post-layout1 #manage-post-area:before{
     background: var(--secondry); border: 2px solid var(--secondry);
   }
 
+  body.home div.banner-item .slick-slide[data-slick-index="0"] a.register-now{
+    display: block;
+  }
+
+  body.infocom-calcutta-2023 .banner-area  a.register-now{
+    display: block;
+  }
+
   .banner-area  a.register-now{
     position: absolute; right: 5%; top:50%; transform: translateY(-50%);
      display:none;
