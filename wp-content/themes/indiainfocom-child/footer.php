@@ -103,7 +103,7 @@
 							<a href="">Terms & Conditions</a>
 						</li>
 						<li>
-							<a href="">Privacy Policy</a>
+							<a href="<?php echo get_home_url(); ?>/privacy-policy">Privacy Policy</a>
 						</li>
 					</ul>
 				</div>
