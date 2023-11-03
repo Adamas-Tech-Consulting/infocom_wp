@@ -39,14 +39,15 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 					
 								<ul class="login-menu">
 									<li class="list-inline-item">
-										<a href="" target="_blank" class="nav-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-									</li>
-									<li  class="list-inline-item">
-										<a href="" target="_blank" class="nav-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										<a href="https://www.facebook.com/infocomconnect" target="_blank" class="nav-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									</li>
 									<li class="list-inline-item">
-										<a href="" target="_blank" class="nav-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+										<a href="https://www.linkedin.com/company/infocomconnect/" target="_blank" class="nav-link"><i class="fa fa-linedin" aria-hidden="true"></i></a>
 									</li>
+									<li  class="list-inline-item">
+										<a href="http://twitter.com/infocomconnect" target="_blank" class="nav-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									</li>
+									
 								</ul>
 					
 				</div>

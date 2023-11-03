@@ -27,6 +27,8 @@
 						the_custom_logo();
 					} ?>
 
+					<a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Infocom-Main-Logo-2022.png"></a>
+
 					<h3>Connect Us</h3>
 
 					<?php
