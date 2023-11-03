@@ -59,8 +59,10 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 				<div class="cover d-flex align-items-center">
 
 					<?php if ( function_exists( 'the_custom_logo' ) ) {
-							the_custom_logo();
+							// the_custom_logo();
 						} ?>
+
+<a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Infocom-Main-Logo-2022.png" style="height:51px;"></a>
 
 						<?php
 							wp_nav_menu(

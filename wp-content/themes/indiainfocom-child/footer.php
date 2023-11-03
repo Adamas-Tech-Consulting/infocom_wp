@@ -24,10 +24,10 @@
 			<div class="row">
 				<div class="col-md-4 px-4">
 					<?php if ( function_exists( 'the_custom_logo' ) ) {
-						the_custom_logo();
+						// the_custom_logo();
 					} ?>
 
-					<a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Infocom-Main-Logo-2022.png"></a>
+					<a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Infocom-Main-Logo-2022.png" style="height:51px;"></a>
 
 					<h3>Connect Us</h3>
 
