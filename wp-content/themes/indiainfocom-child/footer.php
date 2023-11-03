@@ -29,7 +29,7 @@
 
 					<a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Infocom-Main-Logo-2022.png" style="height:51px;"></a>
 
-					<h3>Connect Us</h3>
+					<h3 style="margin-top:20px;">Connect Us</h3>
 
 					<?php
 						wp_nav_menu(
