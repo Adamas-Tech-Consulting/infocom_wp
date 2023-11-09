@@ -64,7 +64,6 @@ function create_post(WP_REST_Request $request)
   wp_set_post_terms($post_id, $request['category'], $taxonomy, false);
   //set_featured_image($request['featured_banner'], $post_id);
   //$banner_id = upload_media($request['event_banner'], $post_id);
-  //$logo_id = upload_media($request['event_logo'], $post_id);
   $input_fields = [
     'show_on_homepage_banner' => $request['featured'],
     'homepage_banner_url' => $request['featured_banner'],
