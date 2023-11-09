@@ -10,6 +10,10 @@
 		margin-right: 10px;
 	}
 
+	.event-info.right{
+		position: static; top:0;
+	}
+
 	html body div#wprmenu_bar {
 	    height: 60px !important;
 	}

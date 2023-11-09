@@ -19,7 +19,7 @@ get_header(); ?>
 					<?php $args = array(
 			            'post_type' => 'event-list',
 			            'posts_per_page' => -1,
-			            'order' => 'ASC',
+			            'order' => 'DESC',
 			         );
 			            $slider = new WP_Query($args);
 			         ?>
@@ -30,10 +30,10 @@ get_header(); ?>
 
 
 						<div class="item">
-							<div class="pic-sec">
+							<div class="pic-sec" style="background:url('<?php the_field('add_conference_logo_url');?>');">
 								<a href="<?php the_permalink();?>">
 									<?php // the_post_thumbnail(); ?>
-									<img src="<?php the_field('add_conference_logo');?>" />
+									<!-- <img src="<?php // the_field('add_conference_logo');?>" /> -->
 									<span><?php the_field('add_date'); ?></span>
 								</a>
 							</div>
@@ -72,9 +72,6 @@ get_header(); ?>
 	</div>
 </section>
 
-
-
-<?php if( get_field('add_video') ): ?>
 
 <section class="session-videos white-bg wow fadeInUp">
 	<div class="container">
@@ -117,7 +114,7 @@ get_header(); ?>
 	
 													<div class="event-img-meta white-color">
 														<h5><?php echo $add_video_name; ?></h5>   
-																<span> <?php echo get_the_excerpt(); ?> </span>
+																<!-- <span> <?php //echo get_the_excerpt(); ?> </span> -->
 																<p>[ <?php echo $add_video_date; ?> ]</p>
 													</div>
 	
@@ -153,8 +150,6 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
-
-<?php endif; ?>
 
 
 <section class="all-blogs wow fadeInUp d-none">
@@ -265,5 +260,7 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+
+
 	
 <?php get_footer();

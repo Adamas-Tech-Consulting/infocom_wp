@@ -24,10 +24,12 @@
 			<div class="row">
 				<div class="col-md-4 px-4">
 					<?php if ( function_exists( 'the_custom_logo' ) ) {
-						the_custom_logo();
+						// the_custom_logo();
 					} ?>
 
-					<h3>Connect Us</h3>
+					<a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Infocom-Main-Logo-2022.png" style="height:51px;"></a>
+
+					<h3 style="margin-top:20px;">Connect Us</h3>
 
 					<?php
 						wp_nav_menu(
@@ -103,7 +105,7 @@
 							<a href="">Terms & Conditions</a>
 						</li>
 						<li>
-							<a href="">Privacy Policy</a>
+							<a href="<?php echo get_home_url(); ?>/privacy-policy">Privacy Policy</a>
 						</li>
 					</ul>
 				</div>
