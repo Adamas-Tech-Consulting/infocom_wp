@@ -67,13 +67,11 @@ function create_post(WP_REST_Request $request)
   $input_fields = [
     'show_on_homepage_banner' => $request['featured'],
     'homepage_banner_url' => $request['featured_banner'],
-    'add_banner' => $banner_id,
     'add_banner_url' => $request['event_banner'],
     'add_date' => date("d F, Y", strtotime($request['event_start_date'])),
     'add_venue' => $request['event_venue'],
     'add_theme' => $request['event_theme'],
     'add_conference_details' => $request['event_description'],
-    'add_conference_logo' => $logo_id,
     'add_conference_logo_url' => $request['event_logo'],
     'add_register_now_link' => $request['registration_link'],
   ];
