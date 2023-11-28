@@ -21,7 +21,7 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define( 'DB_NAME', 'abp_frontend_v1' );
+define( 'DB_NAME', 'abp_frontend_live' );
 
 /** Database username */
 define( 'DB_USER', 'abpfront' );
@@ -80,10 +80,11 @@ $table_prefix = 'infocom_';
  *
  * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
-define( 'WP_HOME', 'http://3.108.240.107/infocom_wp' );
-define( 'WP_SITEURL', 'http://3.108.240.107/infocom_wp' );
+define( 'WP_HOME', 'https://indiainfocom.com' );
+define( 'WP_SITEURL', 'https://indiainfocom.com' );
+define('WP_MEMORY_LIMIT', '256M');
 
 /* Add any custom values between this line and the "stop editing" line. */
 

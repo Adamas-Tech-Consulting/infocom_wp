@@ -42,7 +42,7 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 										<a href="https://www.facebook.com/infocomconnect" target="_blank" class="nav-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									</li>
 									<li class="list-inline-item">
-										<a href="https://www.linkedin.com/company/infocomconnect/" target="_blank" class="nav-link"><i class="fa fa-linedin" aria-hidden="true"></i></a>
+										<a href="https://www.linkedin.com/company/infocomconnect/" target="_blank" class="nav-link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 									</li>
 									<li  class="list-inline-item">
 										<a href="http://twitter.com/infocomconnect" target="_blank" class="nav-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>

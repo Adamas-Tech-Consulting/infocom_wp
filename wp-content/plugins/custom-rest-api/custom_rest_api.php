@@ -15,14 +15,19 @@ function create_term(WP_REST_Request $request)
 {
   $attributes = $request->get_attributes();
   $taxonomy = $attributes['args']['taxonomy'];
+  $display_order = isset($request['display_order']) ? $request['display_order'] : NULL;
   $term = wp_insert_term(
     $request['name'],
-    $taxonomy, 
+    $taxonomy,
     array(
         'description'   => $request['description'],
         'slug'          => $request['slug'],
     )
   );
+  if($display_order)
+  {
+     update_term_meta($term['term_id'], 'display_order', $display_order);
+  }
   return new WP_REST_Response($term, 200);
 }
 
@@ -30,6 +35,7 @@ function update_term(WP_REST_Request $request)
 {
   $attributes = $request->get_attributes();
   $taxonomy = $attributes['args']['taxonomy'];
+  $display_order = isset($request['display_order']) ? $request['display_order'] : NULL;
   $term_id = $request['term_id'];
   $args = [
     'name'        => $request['name'],
@@ -37,6 +43,10 @@ function update_term(WP_REST_Request $request)
     'description' => $request['description'],
   ];
   $term = wp_update_term($term_id, $taxonomy, $args);
+  if($display_order)
+  {
+     update_term_meta($term_id, 'display_order', $display_order);
+  }
   return new WP_REST_Response($term, 200);
 }
 
@@ -68,7 +78,7 @@ function create_post(WP_REST_Request $request)
     'show_on_homepage_banner' => $request['featured'],
     'homepage_banner_url' => $request['featured_banner'],
     'add_banner_url' => $request['event_banner'],
-    'add_date' => date("d F, Y", strtotime($request['event_start_date'])),
+    'add_date' => $request['event_start_date'],
     'add_venue' => $request['event_venue'],
     'add_theme' => $request['event_theme'],
     'add_conference_details' => $request['event_description'],
@@ -125,7 +135,7 @@ function update_post(WP_REST_Request $request)
     'show_on_homepage_banner' => $request['featured'],
     'homepage_banner_url' => $request['featured_banner'],
     'add_banner_url' => $request['event_banner'],
-    'add_date' => date("d F, Y", strtotime($request['event_start_date'])),
+    'add_date' => $request['event_start_date'],
     'add_venue' => $request['event_venue'],
     'add_theme' => $request['event_theme'],
     'add_conference_details' => $request['event_description'],
