@@ -12,5 +12,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+<<<<<<< HEAD
 php_value max_input_vars 50000
+=======
+
+php_value max_input_vars 500000
+
+>>>>>>> 6964018396b794aaa33e8ebac8de51af7354e32e
 # END WordPress

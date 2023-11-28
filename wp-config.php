@@ -82,8 +82,13 @@ $table_prefix = 'infocom_';
  */
 define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
+<<<<<<< HEAD
 define( 'WP_HOME', 'https://indiainfocom.com' );
 define( 'WP_SITEURL', 'https://indiainfocom.com' );
+=======
+define( 'WP_HOME', 'http://3.108.240.107/infocom_wp' );
+define( 'WP_SITEURL', 'http://3.108.240.107/infocom_wp' );
+>>>>>>> 6964018396b794aaa33e8ebac8de51af7354e32e
 define('WP_MEMORY_LIMIT', '256M');
 
 /* Add any custom values between this line and the "stop editing" line. */

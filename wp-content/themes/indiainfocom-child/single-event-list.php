@@ -463,6 +463,67 @@ get_header();?>
 															
 													<?php $i++; endwhile; ?>
 											 	</div>
+<<<<<<< HEAD
+=======
+
+
+									<div class="tab-pane fade d-none" id="nav-key" role="tabpanel">
+										<div class="row">
+											<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
+												$add_speaker_image = get_sub_field('add_speaker_image');
+												$add_speaker_name = get_sub_field('add_speaker_name');
+												$add_company_name = get_sub_field('add_company_name');
+												$add_designation = get_sub_field('add_designation');
+												$options = get_sub_field('choose_speaker_type');
+											?>
+													<?php if( $options && in_array('KeyNoteSpeaker', $options) ) { ?>
+														<div class="col-md-3">
+															<div class="speaker">
+																<div class="hover-overlay">
+																	<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+																</div>
+																<div class="speaker-meta">                                                  
+																	<h5 class=""><?php echo $add_speaker_name; ?></h5>
+																	<span class=""><?php echo $add_designation; ?></span>
+																	<p class=""><?php echo $add_company_name; ?></p>
+																	
+																</div>
+															</div>
+														</div>
+													<?php } ?>
+											<?php $i++; endwhile; ?>
+										</div>
+									</div>
+
+
+									<div class="tab-pane fade d-none" id="nav-regular" role="tabpanel">
+										<div class="row">
+											<?php $i=1; while( have_rows('add_speakers') ): the_row(); 
+												$add_speaker_image = get_sub_field('add_speaker_image');
+												$add_speaker_name = get_sub_field('add_speaker_name');
+												$add_company_name = get_sub_field('add_company_name');
+												$add_designation = get_sub_field('add_designation');
+												$options = get_sub_field('choose_speaker_type');
+											?>
+													<?php if( $options && in_array('Regular', $options) ) { ?>
+														<div class="col-md-3">
+															<div class="speaker">
+																<div class="hover-overlay">
+																	<img src="<?php echo $add_speaker_image; ?>" class="img-fluid" />
+																</div>
+																<div class="speaker-meta">                                                  
+																	<h5 class=""><?php echo $add_speaker_name; ?></h5>
+																	<span class=""><?php echo $add_designation; ?></span>
+																	<p class=""><?php echo $add_company_name; ?></p>
+																	
+																</div>
+															</div>
+														</div>
+													<?php } ?>
+											<?php $i++; endwhile; ?>
+										</div>
+									</div>
+>>>>>>> 6964018396b794aaa33e8ebac8de51af7354e32e
 									
 							</div>
 						
@@ -473,7 +534,23 @@ get_header();?>
 
 <?php endif; ?>
 
+<<<<<<< HEAD
 
+=======
+<?php while( have_rows('add_sponsers') ): the_row(); ?>
+	  <?php 
+	//$terms = get_sub_field('sponsorship_type');
+	$terms = get_sub_field( 'sponsorship_type', get_the_ID() );
+	 echo '<pre>';
+     	// print_r($terms); 
+     	$details = get_the_category_by_ID($terms[0]);
+     	// print_r($details);
+     echo '</pre>';
+
+	 ?>
+
+<?php endwhile; ?>
+>>>>>>> 6964018396b794aaa33e8ebac8de51af7354e32e
 
 	<?php if( get_field('add_sponsers') ): ?>
 
@@ -487,6 +564,7 @@ get_header();?>
 						</div>
 					</div>
 
+<<<<<<< HEAD
 					<?php
 				     $sponsorship_types = array();
 				     while( have_rows('add_sponsers') ): the_row(); 
@@ -497,6 +575,16 @@ get_header();?>
 				      ksort($sponsorship_types);
 				      $sponsorship_types = array_values($sponsorship_types);
 					?>
+=======
+					<?php 
+						$sponsorship_types = array();
+						while( have_rows('add_sponsers') ): the_row(); 
+						$terms = get_sub_field( 'sponsorship_type', get_the_ID() );
+						$sponsorship_types[] = $terms[0];
+						endwhile;
+					?>
+					<?php $sponsorship_types = array_values(array_unique($sponsorship_types)); ?>
+>>>>>>> 6964018396b794aaa33e8ebac8de51af7354e32e
 					<div class="cover-div">
 						<?php foreach($sponsorship_types as $sponsorship_type) : ?>
 						<h4 class="mb-4 custom text-center">
